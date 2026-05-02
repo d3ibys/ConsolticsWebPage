@@ -23,6 +23,8 @@ export default function Navbar() {
       type: 'dropdown',
       items: [
         { name: '¿Quiénes somos?', href: '/#quienes-somos' },
+        { name: 'Diferenciales', href: '/#diferenciales' },
+        { name: 'Nuestros clientes', href: '/clientes' },
         { name: 'Certificaciones', href: '/#certificaciones' },
         { name: 'Casos de éxito', href: '/#casos-exito' },
       ]
@@ -31,12 +33,16 @@ export default function Navbar() {
       name: 'Soluciones', 
       type: 'dropdown',
       items: [
-        { name: 'GLPI (Helpdesk & Asset)', href: '/soluciones/glpi' },
+        { name: 'ITSM & Gestión de Activos (GLPI)', href: '/soluciones/glpi' },
+        { name: 'Monitorización de Infraestructura', href: '#' },
+        { name: 'Automatización de Procesos', href: '#' },
+        { name: 'Redes y Conectividad', href: '#' },
+        { name: 'Seguridad y Vulnerabilidades', href: '#' },
+        { name: 'Backup y Almacenamiento', href: '#' },
+        { name: 'Virtualización y Contenedores', href: '#' },
       ]
     },
     { name: 'Servicios', href: '/#servicios', type: 'link' },
-    { name: 'Diferenciales', href: '/#diferenciales', type: 'link' },
-    { name: 'Nuestros clientes', href: '/clientes', type: 'link' },
     { name: 'Contacto', href: '/#contacto', type: 'link' }
   ];
 
@@ -102,16 +108,18 @@ export default function Navbar() {
                       transition={{ duration: 0.2 }}
                       className="absolute top-full left-0 mt-1 w-56 bg-surface-container-high border border-white/10 rounded-2xl shadow-2xl p-2 z-[60]"
                     >
-                      {link.items?.map((item) => (
-                        <Link
-                          key={item.name}
-                          to={item.href}
-                          onClick={() => handleLinkClick(item.href)}
-                          className="block px-4 py-3 rounded-xl hover:bg-white/5 text-on-surface-variant hover:text-cyan-accent transition-all duration-200 font-medium"
-                        >
-                          {item.name}
-                        </Link>
-                      ))}
+                      <div className="flex flex-col gap-1">
+                        {link.items?.map((item) => (
+                          <Link
+                            key={item.name}
+                            to={item.href}
+                            onClick={() => handleLinkClick(item.href)}
+                            className="block px-4 py-2.5 rounded-xl hover:bg-white/5 text-on-surface-variant hover:text-cyan-accent transition-all duration-200 font-medium text-xs lg:text-sm"
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
+                      </div>
                     </motion.div>
                   )}
                 </AnimatePresence>

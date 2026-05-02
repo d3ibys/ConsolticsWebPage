@@ -27,7 +27,7 @@ export default function Clients() {
             Nuestros Aliados
           </span>
           <h1 className="text-5xl md:text-7xl font-black tracking-tighter">Colaboramos con los <br /> <span className="text-cyan-accent">Mejores del Mundo</span></h1>
-          <p className="text-xl text-on-surface-variant max-w-2xl mx-auto font-medium leading-relaxed">
+          <p className="text-xl text-on-surface-variant max-w-2xl mx-auto font-medium leading-relaxed text-justify">
             Desde startups unicornio hasta corporaciones Fortune 500, ayudamos a las organizaciones a redefinir lo que es posible a través de la tecnología.
           </p>
         </motion.div>
@@ -53,7 +53,7 @@ export default function Clients() {
                 </div>
               </div>
               <h3 className="text-2xl font-black mb-3 tracking-tight">{client.name}</h3>
-              <p className="text-on-surface-variant font-medium leading-relaxed">{client.desc}</p>
+              <p className="text-on-surface-variant font-medium leading-relaxed text-justify">{client.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -69,7 +69,7 @@ export default function Clients() {
           className="space-y-8"
         >
           <div className="text-6xl font-serif text-cyan-accent italic opacity-20">"</div>
-          <p className="text-3xl md:text-4xl font-bold tracking-tight text-on-surface italic leading-snug">
+          <p className="text-3xl md:text-4xl font-bold tracking-tight text-on-surface italic leading-snug text-justify">
             Consoltics no es solo un proveedor, es una extensión de nuestro equipo de ingeniería. Su nivel de compromiso y expertise es inigualable en la región.
           </p>
           <div className="space-y-1">

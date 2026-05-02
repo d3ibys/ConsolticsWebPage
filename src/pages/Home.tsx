@@ -102,7 +102,7 @@ export default function Home() {
               </span> <br />
               de tu Empresa
             </h1>
-            <p className="text-xl text-on-surface-variant max-w-xl leading-relaxed font-medium">
+            <p className="text-xl text-on-surface-variant max-w-xl leading-relaxed font-medium text-justify">
               Desarrollamos ecosistemas digitales resilientes y escalables para las organizaciones que lideran la transformación tecnológica global.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
@@ -170,7 +170,7 @@ export default function Home() {
               Nuestra Identidad
             </div>
             <h2 className="text-4xl md:text-5xl font-black tracking-tighter">Pasión por la <br /> Excelencia Técnica</h2>
-            <p className="text-lg text-on-surface-variant leading-relaxed font-medium">
+            <p className="text-lg text-on-surface-variant leading-relaxed font-medium text-justify">
               En Consoltics, no solo implementamos tecnología; orquestamos el cambio. Fundada con la visión de cerrar la brecha entre la complejidad técnica y el valor comercial, nos hemos convertido en el socio estratégico preferido de las empresas que no aceptan menos que la perfección.
             </p>
             <div className="grid grid-cols-2 gap-8 pt-4">

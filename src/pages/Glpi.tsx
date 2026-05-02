@@ -65,7 +65,7 @@ export default function Glpi() {
           <h1 className="text-5xl md:text-7xl font-black tracking-tighter leading-tight">
             GLPI: El Estándar <br /> EN <span className="text-cyan-accent">Gestión IT</span>
           </h1>
-          <p className="text-xl text-on-surface-variant font-medium leading-relaxed">
+          <p className="text-xl text-on-surface-variant font-medium leading-relaxed text-justify">
             La solución de código abierto más completa para la gestión de infraestructura tecnológica y mesas de ayuda profesionales.
           </p>
           <div className="flex gap-4">
@@ -102,10 +102,10 @@ export default function Glpi() {
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16">
           <motion.div {...fadeIn} className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-black tracking-tighter">¿Qué es GLPI y por qué su empresa lo necesita?</h2>
-            <p className="text-on-surface-variant font-medium leading-relaxed">
+            <p className="text-on-surface-variant font-medium leading-relaxed text-justify">
               GLPI es una herramienta poderosa de gestión de activos y de mesa de ayuda (ITSM). Permite a las organizaciones centralizar toda su información de infraestructura en una sola plataforma, eliminando silos de datos y mejorando drásticamente el tiempo de respuesta ante incidentes.
             </p>
-            <p className="text-on-surface-variant font-medium leading-relaxed">
+            <p className="text-on-surface-variant font-medium leading-relaxed text-justify">
               Desde el seguimiento de una simple laptop hasta la gestión de complejos clústeres de servidores y contratos de mantenimiento, GLPI proporciona visibilidad total sobre sus activos digitales.
             </p>
           </motion.div>
@@ -129,7 +129,7 @@ export default function Glpi() {
       <section className="max-w-7xl mx-auto px-6 mb-32">
         <motion.div {...fadeIn} className="text-center mb-16 space-y-4">
           <h2 className="text-4xl font-black tracking-tighter">Funcionalidades Core</h2>
-          <p className="text-on-surface-variant max-w-xl mx-auto font-medium">Una plataforma integral diseñada para equipos de IT de alto rendimiento.</p>
+          <p className="text-on-surface-variant max-w-xl mx-auto font-medium text-justify">Una plataforma integral diseñada para equipos de IT de alto rendimiento.</p>
         </motion.div>
         <div className="grid md:grid-cols-3 gap-8">
           {features.map((f, idx) => (
