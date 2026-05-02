@@ -5,8 +5,15 @@ export default function Footer() {
     <footer className="bg-surface-container-lowest border-t border-white/5 py-12">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12 mb-12">
         <div className="col-span-2 space-y-6">
-          <Link to="/" className="text-3xl font-black tracking-tighter text-on-surface">Consoltics</Link>
-          <p className="text-on-surface-variant max-w-sm leading-relaxed font-medium">
+          <Link to="/" className="flex items-center">
+            <img 
+              src="/image/Logov4.png" 
+              alt="Consoltics Logo" 
+              className="h-20 w-auto object-contain"
+              referrerPolicy="no-referrer"
+            />
+          </Link>
+          <p className="text-on-surface-variant max-w-sm leading-relaxed font-medium text-justify">
             Líderes en transformación digital y ciberseguridad avanzada. Protegiendo y escalando el futuro de las empresas globales.
           </p>
         </div>
@@ -21,6 +28,8 @@ export default function Footer() {
             <Link to="/soluciones/automatizacion" className="hover:text-cyan-accent transition-colors">Process Automation</Link>
             <Link to="/soluciones/redes" className="hover:text-cyan-accent transition-colors">Networking & Core</Link>
             <Link to="/soluciones/seguridad" className="hover:text-cyan-accent transition-colors">Cybersecurity & SOC</Link>
+            <Link to="/soluciones/backup" className="hover:text-cyan-accent transition-colors">Backup & Resilience</Link>
+            <Link to="/soluciones/virtualizacion" className="hover:text-cyan-accent transition-colors">Virtualization & Cloud</Link>
             <Link to="/clientes" className="hover:text-cyan-accent transition-colors">Nuestros Clientes</Link>
           </div>
         </div>

@@ -38,8 +38,8 @@ export default function Navbar() {
         { name: 'Automatización de Procesos', href: '/soluciones/automatizacion' },
         { name: 'Redes y Conectividad', href: '/soluciones/redes' },
         { name: 'Seguridad y Vulnerabilidades', href: '/soluciones/seguridad' },
-        { name: 'Backup y Almacenamiento', href: '#' },
-        { name: 'Virtualización y Contenedores', href: '#' },
+        { name: 'Backup y Almacenamiento', href: '/soluciones/backup' },
+        { name: 'Virtualización y Contenedores', href: '/soluciones/virtualizacion' },
       ]
     },
     { name: 'Servicios', href: '/#servicios', type: 'link' },
@@ -59,17 +59,21 @@ export default function Navbar() {
   };
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-surface/80 backdrop-blur-xl border-b border-white/5 py-3 shadow-2xl' : 'bg-transparent py-6'
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 h-[90px] flex items-center ${
+      isScrolled ? 'bg-surface/80 backdrop-blur-xl border-b border-white/5 shadow-2xl' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <Link 
           to="/" 
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="text-2xl font-black tracking-tighter text-on-surface flex items-center gap-2 group"
+          className="flex items-center group"
         >
-          <span className="bg-cyan-accent w-8 h-8 rounded-lg flex items-center justify-center text-surface text-xl rotate-3 group-hover:rotate-0 transition-transform duration-300">C</span>
-          Consoltics
+          <img 
+            src="/image/Logov4.png" 
+            alt="Consoltics Logo" 
+            className="h-20 md:h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            referrerPolicy="no-referrer"
+          />
         </Link>
         
         <div className="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wide">

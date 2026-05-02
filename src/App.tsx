@@ -9,6 +9,8 @@ import Monitoring from './pages/Monitoring';
 import Automation from './pages/Automation';
 import Networking from './pages/Networking';
 import Security from './pages/Security';
+import Backup from './pages/Backup';
+import Virtualization from './pages/Virtualization';
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -42,6 +44,8 @@ export default function App() {
           <Route path="/soluciones/automatizacion" element={<Automation />} />
           <Route path="/soluciones/redes" element={<Networking />} />
           <Route path="/soluciones/seguridad" element={<Security />} />
+          <Route path="/soluciones/backup" element={<Backup />} />
+          <Route path="/soluciones/virtualizacion" element={<Virtualization />} />
         </Routes>
         <Footer />
       </div>
