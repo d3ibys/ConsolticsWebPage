@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    restart: always
+    environment:
+      - NODE_ENV=production
+
+  # Optional: Development service if you want to run via compose in dev
+  dev:
+    image: node:20-alpine
+    working_dir: /app
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    command: npm run dev
+    environment:
+      - NODE_ENV=development
