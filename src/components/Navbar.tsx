@@ -34,10 +34,10 @@ export default function Navbar() {
       type: 'dropdown',
       items: [
         { name: 'ITSM & Gestión de Activos (GLPI)', href: '/soluciones/glpi' },
-        { name: 'Monitorización de Infraestructura', href: '#' },
-        { name: 'Automatización de Procesos', href: '#' },
-        { name: 'Redes y Conectividad', href: '#' },
-        { name: 'Seguridad y Vulnerabilidades', href: '#' },
+        { name: 'Monitorización de Infraestructura', href: '/soluciones/monitorizacion' },
+        { name: 'Automatización de Procesos', href: '/soluciones/automatizacion' },
+        { name: 'Redes y Conectividad', href: '/soluciones/redes' },
+        { name: 'Seguridad y Vulnerabilidades', href: '/soluciones/seguridad' },
         { name: 'Backup y Almacenamiento', href: '#' },
         { name: 'Virtualización y Contenedores', href: '#' },
       ]

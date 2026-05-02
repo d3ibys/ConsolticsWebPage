@@ -17,6 +17,10 @@ export default function Footer() {
             <Link to="/#certificaciones" className="hover:text-cyan-accent transition-colors">Certificaciones</Link>
             <Link to="/#casos-exito" className="hover:text-cyan-accent transition-colors">Casos de Éxito</Link>
             <Link to="/soluciones/glpi" className="hover:text-cyan-accent transition-colors">GLPI Solution</Link>
+            <Link to="/soluciones/monitorizacion" className="hover:text-cyan-accent transition-colors">Infrastructure Monitoring</Link>
+            <Link to="/soluciones/automatizacion" className="hover:text-cyan-accent transition-colors">Process Automation</Link>
+            <Link to="/soluciones/redes" className="hover:text-cyan-accent transition-colors">Networking & Core</Link>
+            <Link to="/soluciones/seguridad" className="hover:text-cyan-accent transition-colors">Cybersecurity & SOC</Link>
             <Link to="/clientes" className="hover:text-cyan-accent transition-colors">Nuestros Clientes</Link>
           </div>
         </div>

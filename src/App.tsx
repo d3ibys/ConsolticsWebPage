@@ -5,6 +5,10 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Clients from './pages/Clients';
 import Glpi from './pages/Glpi';
+import Monitoring from './pages/Monitoring';
+import Automation from './pages/Automation';
+import Networking from './pages/Networking';
+import Security from './pages/Security';
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -34,6 +38,10 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/clientes" element={<Clients />} />
           <Route path="/soluciones/glpi" element={<Glpi />} />
+          <Route path="/soluciones/monitorizacion" element={<Monitoring />} />
+          <Route path="/soluciones/automatizacion" element={<Automation />} />
+          <Route path="/soluciones/redes" element={<Networking />} />
+          <Route path="/soluciones/seguridad" element={<Security />} />
         </Routes>
         <Footer />
       </div>
