@@ -58,6 +58,14 @@ export default function Navbar() {
     }
   };
 
+  const isLinkActive = (href: string) => {
+    if (href.startsWith('/#')) {
+      const hash = href.split('#')[1];
+      return location.pathname === '/' && location.hash === `#${hash}`;
+    }
+    return location.pathname === href;
+  };
+
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 h-[90px] flex items-center ${
       isScrolled ? 'bg-surface/80 backdrop-blur-xl border-b border-white/5 shadow-2xl' : 'bg-transparent'
@@ -85,7 +93,13 @@ export default function Navbar() {
               onMouseLeave={() => link.type === 'dropdown' && setActiveDropdown(null)}
             >
               {link.type === 'dropdown' ? (
-                <button className="flex items-center gap-1.5 text-on-surface-variant hover:text-cyan-accent transition-colors duration-300 py-1">
+                <button 
+                  className={`flex items-center gap-1.5 transition-colors duration-300 py-1 ${
+                    link.items?.some(item => isLinkActive(item.href)) 
+                      ? 'text-cyan-accent' 
+                      : 'text-on-surface-variant hover:text-cyan-accent'
+                  }`}
+                >
                   {link.name}
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${activeDropdown === link.name ? 'rotate-180' : ''}`} />
                 </button>
@@ -93,8 +107,10 @@ export default function Navbar() {
                 <Link 
                   to={link.href!} 
                   onClick={() => handleLinkClick(link.href!)}
-                  className={`text-on-surface-variant hover:text-cyan-accent transition-colors duration-300 ${
-                    location.pathname === link.href ? 'text-cyan-accent' : ''
+                  className={`transition-colors duration-300 ${
+                    isLinkActive(link.href!) 
+                      ? 'text-cyan-accent' 
+                      : 'text-on-surface-variant hover:text-cyan-accent'
                   }`}
                 >
                   {link.name}
@@ -118,7 +134,11 @@ export default function Navbar() {
                             key={item.name}
                             to={item.href}
                             onClick={() => handleLinkClick(item.href)}
-                            className="block px-4 py-2.5 rounded-xl hover:bg-white/5 text-on-surface-variant hover:text-cyan-accent transition-all duration-200 font-medium text-xs lg:text-sm"
+                            className={`block px-4 py-2.5 rounded-xl hover:bg-white/5 transition-all duration-200 font-medium text-xs lg:text-sm ${
+                              isLinkActive(item.href)
+                                ? 'text-cyan-accent bg-white/5'
+                                : 'text-on-surface-variant hover:text-cyan-accent'
+                            }`}
                           >
                             {item.name}
                           </Link>
@@ -161,13 +181,19 @@ export default function Navbar() {
                 <div key={link.name} className="space-y-4">
                   {link.type === 'dropdown' ? (
                     <div className="space-y-4 border-b border-white/5 pb-4">
-                      <span className="text-on-surface font-bold text-lg">{link.name}</span>
+                      <span className={`font-bold text-lg ${
+                        link.items?.some(item => isLinkActive(item.href)) ? 'text-cyan-accent' : 'text-on-surface'
+                      }`}>
+                        {link.name}
+                      </span>
                       <div className="pl-4 flex flex-col gap-4">
                         {link.items?.map((item) => (
                           <Link 
                             key={item.name}
                             to={item.href}
-                            className="text-on-surface-variant hover:text-cyan-accent transition-colors"
+                            className={`transition-colors ${
+                              isLinkActive(item.href) ? 'text-cyan-accent' : 'text-on-surface-variant hover:text-cyan-accent'
+                            }`}
                             onClick={() => handleLinkClick(item.href)}
                           >
                             {item.name}
@@ -179,7 +205,9 @@ export default function Navbar() {
                     <Link 
                       key={link.name}
                       to={link.href!} 
-                      className="block text-on-surface font-bold text-lg border-b border-white/5 pb-2 hover:text-cyan-accent transition-colors"
+                      className={`block font-bold text-lg border-b border-white/5 pb-2 transition-colors ${
+                        isLinkActive(link.href!) ? 'text-cyan-accent' : 'text-on-surface hover:text-cyan-accent'
+                      }`}
                       onClick={() => handleLinkClick(link.href!)}
                     >
                       {link.name}
