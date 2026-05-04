@@ -92,7 +92,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
-            <span className="inline-block translate-y-[35px] py-1.5 px-4 rounded-full bg-cyan-accent/10 text-cyan-accent border border-cyan-accent/20 font-semibold text-xs tracking-widest uppercase">
+            <span className="inline-block translate-y-[5px] py-1.5 px-4 rounded-full bg-cyan-accent/10 text-cyan-accent border border-cyan-accent/20 font-semibold text-xs tracking-widest uppercase">
               Tecnología de Vanguardia
             </span>
             <h1 className="text-5xl lg:text-7xl font-extrabold leading-tight tracking-tighter">

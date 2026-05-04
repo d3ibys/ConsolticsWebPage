@@ -62,16 +62,16 @@ export default function Navbar() {
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 h-[90px] flex items-center ${
       isScrolled ? 'bg-surface/80 backdrop-blur-xl border-b border-white/5 shadow-2xl' : 'bg-transparent'
     }`}>
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <div className="w-full px-4 md:px-6 flex items-center justify-between">
         <Link 
           to="/" 
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="flex items-center group"
+          className="flex items-center group shrink-0"
         >
           <img 
             src="/image/Logov4.png" 
             alt="Consoltics Logo" 
-            className="h-20 md:h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            className="h-12 md:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             referrerPolicy="no-referrer"
           />
         </Link>
