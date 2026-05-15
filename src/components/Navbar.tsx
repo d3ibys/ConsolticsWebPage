@@ -17,6 +17,17 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMenuOpen]);
+
   const navLinks = [
     { 
       name: 'Nosotros', 
@@ -174,7 +185,7 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed inset-0 top-[64px] md:hidden bg-surface-container-high z-40 overflow-y-auto"
+            className="fixed inset-x-0 bottom-0 top-[90px] md:hidden bg-surface-container-high z-50 overflow-y-auto h-[calc(100vh-90px)]"
           >
             <div className="p-8 space-y-6">
               {navLinks.map((link) => (

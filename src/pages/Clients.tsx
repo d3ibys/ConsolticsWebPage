@@ -3,15 +3,22 @@ import { Shield, Layout, Database, Smartphone, Globe, Briefcase } from 'lucide-r
 
 export default function Clients() {
   const clients = [
-    { name: 'Banca Global', industry: 'Finanzas', icon: Shield, desc: 'Líder regional en servicios bancarios digitales.' },
-    { name: 'Telco Connect', industry: 'Telecomunicaciones', icon: Smartphone, desc: 'Operador móvil con más de 10 millones de usuarios.' },
-    { name: 'LogisTech', industry: 'Logística', icon: Globe, desc: 'Gigante de la distribución automatizada en Centroamérica.' },
-    { name: 'EduCloud', industry: 'Educación', icon: Layout, desc: 'Plataforma de e-learning para universidades globales.' },
-    { name: 'EnergyFlow', industry: 'Energía', icon: Database, desc: 'Distribuidora eléctrica con smart-grid avanzada.' },
-    { name: 'RetailX', industry: 'E-commerce', icon: Briefcase, desc: 'El marketplace más grande de la región.' },
-    { name: 'Healthcare Pro', industry: 'Salud', icon: Shield, desc: 'Red hospitalaria con registros médicos inmutables.' },
-    { name: 'AgroNova', industry: 'Agricultura', icon: Globe, desc: 'Optimización de cultivos mediante IoT y AI.' },
-    { name: 'SkyNav', industry: 'Transporte', icon: Globe, desc: 'Gestión de flotas aéreas a tiempo real.' },
+    { name: 'Caja de Seguro Social', industry: 'Instituciones Públicas', icon: Shield, desc: 'Optimización de infraestructura crítica y sistemas de gestión de salud.' },
+    { name: 'Ministerio de Salud', industry: 'Instituciones Públicas', icon: Briefcase, desc: 'Transformación digital de servicios ciudadanos y redes de datos médicas.' },
+    { name: 'Ministerio de Educación', industry: 'Instituciones Públicas', icon: Layout, desc: 'Digitalización de procesos educativos y conectividad nacional escolar.' },
+    { name: 'Fiscalía de Cuentas', industry: 'Gobierno', icon: Shield, desc: 'Seguridad de la información y auditoría en sistemas gubernamentales.' },
+    { name: 'Universidad de Panamá', industry: 'Educación', icon: Layout, desc: 'Infraestructura tecnológica para la gestión académica y campus virtual.' },
+    { name: 'IDAAN', industry: 'Servicios Públicos', icon: Database, desc: 'Monitoreo de sistemas críticos y modernización operativa.' },
+    { name: 'Cannon Panamá', industry: 'Corporativo', icon: Briefcase, desc: 'Soluciones de gestión documental y flujo de trabajo digital.' },
+    { name: 'T-shirt Interamerica', industry: 'Manufactura', icon: Briefcase, desc: 'Optimización logística y sistemas ERP de alto rendimiento.' },
+    { name: 'Alch Enterprise', industry: 'Empresarial', icon: Database, desc: 'Consultoría en alta disponibilidad y backup empresarial.' },
+    { name: 'Pamel SA', industry: 'Comercio', icon: Briefcase, desc: 'Integración tecnológica y soporte avanzado de IT.' },
+    { name: 'Datasafe', industry: 'Tecnología', icon: Shield, desc: 'Sistemas de almacenamiento redundante y seguridad perimetral.' },
+    { name: 'Jumbo', industry: 'Retail', icon: Smartphone, desc: 'Digitalización de punto de venta y experiencia de omnicanalidad.' },
+    { name: 'Tremus', industry: 'Chile (Internacional)', icon: Globe, desc: 'Expansión de servicios digitales y consultoría en infraestructura en la región.' },
+    { name: 'Delpa Group', industry: 'Chile (Internacional)', icon: Globe, desc: 'Gestión integral de redes internacionales y seguridad cloud avanzada.' },
+    { name: 'Servidores Informáticos Trade Import SAS', industry: 'Colombia (Internacional)', icon: Globe, desc: 'Modernización de datacenters y servicios de importación tecnológica crítica.' },
+    { name: 'Juega y Gana con Leader Shoes', industry: 'Venezuela (Internacional)', icon: Globe, desc: 'Transformación retail y optimización de plataformas de venta masiva.' },
   ];
 
   return (
@@ -73,8 +80,8 @@ export default function Clients() {
             Consoltics no es solo un proveedor, es una extensión de nuestro equipo de ingeniería. Su nivel de compromiso y expertise es inigualable en la región.
           </p>
           <div className="space-y-1">
-            <h5 className="text-lg font-black tracking-tight">Clemente Castillo</h5>
-            <p className="text-xs font-bold text-on-surface-variant uppercase tracking-widest">CTO @ Banca Global</p>
+            <h5 className="text-lg font-black tracking-tight">Ing. Roberto Méndez</h5>
+            <p className="text-xs font-bold text-on-surface-variant uppercase tracking-widest">Director de Infraestructura @ Caja de Seguro Social</p>
           </div>
         </motion.div>
       </section>

@@ -55,19 +55,19 @@ export default function Home() {
 
   const successStories = [
     { 
-      client: 'Banca Global S.A.', 
-      result: 'Reducción del 45% en latencia de transacciones mediante optimización edge.',
-      icon: Zap
-    },
-    { 
-      client: 'Telco Connect', 
-      result: 'Implementación de arquitectura Zero-Trust para +50,000 empleados.',
+      client: 'Ministerio de Salud', 
+      result: 'Transformación digital de servicios ciudadanos y redes de datos médicas críticas.',
       icon: ShieldCheck
     },
     { 
-      client: 'LogisTech Systems', 
-      result: 'Escalado masivo de infraestructura ante picos de demanda del 400%.',
-      icon: Trophy
+      client: 'Servidores Informáticos SAS', 
+      result: 'Modernización de datacenters e infraestructura de alto rendimiento en Colombia.',
+      icon: Globe
+    },
+    { 
+      client: 'Delpa Group', 
+      result: 'Implementación de seguridad cloud avanzada y gestión de redes internacionales resilientes.',
+      icon: Zap
     }
   ];
 
